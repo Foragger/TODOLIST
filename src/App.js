@@ -39,10 +39,13 @@ function App() {
         break;
       }
   };
+  
 
   //Save to Local
   const saveLocalTodos = () => {
+    if(todos.length>0){
     localStorage.setItem("todos", JSON.stringify(todos));
+    }
   };
   const getLocalTodos = () => {
     if(localStorage.getItem("todos") === null) {
